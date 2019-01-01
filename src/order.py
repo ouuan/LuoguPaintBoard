@@ -3,10 +3,10 @@ import time
 import random
 import json
 
-with open("..\\cookies.json",'r') as cookiesjson:
+with open("cookies.json",'r') as cookiesjson:
 	cookies=json.load(cookiesjson)
 
-with open("..\\data\\board.json",'r') as boardjson:
+with open("data/board.json",'r') as boardjson:
 	board=json.load(boardjson)
 
 cur=0

@@ -6,7 +6,10 @@ getheader={
         "user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36"
 }
 
-with open("..\\data\\board.json",'r') as boardjson:
+with open("cookies.json",'r') as cookiesjson:
+	cookies=json.load(cookiesjson)
+
+with open("data/board.json",'r') as boardjson:
 	board=json.load(boardjson)
 
 tot=len(board)

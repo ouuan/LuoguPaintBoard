@@ -37,7 +37,7 @@ P.S. 如果需要画多张图，重复执行几次即可，`ImageToData.py` 不�
 
 ## 开始画图
 
-默认时间间隔为 30s，如有需要请自行修改 `src` 内源码的 `timeout` 。
+默认时间间隔为 30s（一轮 cookies），如有需要请自行修改 `src` 内源码的 `timeout` 。
 
 ### rand
 
@@ -52,6 +52,8 @@ P.S. 如果需要画多张图，重复执行几次即可，`ImageToData.py` 不�
 `runrand.bat`：无限循环随机撒点。
 
 `runorder.bat`：按照顺序画图。
+
+如果不通过 bat 使用 py，请注意路径问题（使用 bat 路径是 `cookies.json`、 `data/board.json`，使用 py 路径是 `../cookies.json`、`../data/board.json`）。
 
 ### count
 

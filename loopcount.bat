@@ -1,4 +1,4 @@
 @echo off
 :loop
-python count.py
+python .\src\count.py
 goto loop
