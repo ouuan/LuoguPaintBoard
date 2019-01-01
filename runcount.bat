@@ -1,2 +1,2 @@
-python count.py
+python .\src\count.py
 pause

@@ -1,6 +1,6 @@
-# LuoguPaintBoard
+# 使用教程
 
-## Requirements
+## 准备环境
 
 [python 3](https://www.python.org/downloads/)
 
@@ -10,7 +10,21 @@ pillow：`python -m pip install pillow`
 
 requests：`python -m pip install requests`
 
-## cookies.json
+## 制作数据
+
+1. 将 `LuoguPaintBoard.gpl` 复制到 `GIMP安装路径\share\gimp\2.0\palettes`
+2. 用 GIMP 打开原始图片。
+3. 图像→缩放图像。
+4. 图像→模式→索引，Use custom palette：LuoguPaintBoard，**不要**勾选“从颜色表中移除无用和重复的颜色”。“递色”选项可以自己试试看哪种效果比较好。
+5. 文件→导出为→选一个路径→选择文件类型：**bmp** →导出。
+6. `python .\ImageToData.py 图片路径 左上角X坐标 左上角Y坐标`
+7. 打开 `preview.html` 检查数据生成是否有问题。
+
+P.S. 如果需要画多张图，重复执行几次即可，`ImageToData.py` 不会覆盖原有数据，而会在后面添加。
+
+## 填写 cookies
+
+在 `cookies.json` 里按如下格式填写：
 
 ```
 [
@@ -21,70 +35,30 @@ requests：`python -m pip install requests`
 ]
 ```
 
-## board.json
+## 开始画图
 
-```
-[
-[x,y,col],[x,y,col],...[x,y,col],
-[x,y,col],[x,y,col],...[x,y,col],
-...
-[x,y,col],[x,y,col],...[x,y,col]
-]
-```
+默认时间间隔为 30s，如有需要请自行修改 `src` 内源码的 `timeout` 。
 
-## rand.py
+### rand
 
-随机撒点，可修改timeout。请不要使用 `rand.py` 对已经画好的图片进行维护。
+随机撒点。推荐只用来画图，请不要在维护图片时使用。
 
-## order.py
+### order
 
-按 `board.json` 中的顺序涂色，涂完后会循环到开头。推荐使用 `order.py` 对已经画好的图片进行维护。
+按照 `data\board.json` 中的顺序依次画。推荐使用 order 维护图片。
 
-## count.py
+### run
 
-显示剩余像素数，并根据cookies数估算剩余时间。请注意，在跟其他人抢位置的时候估算是不准的。
+`runrand.bat`：无限循环随机撒点。
 
-## preview.html
+`runorder.bat`：按照顺序画图。
 
-预览效果。需要 `board2.json` 配合。
+### count
 
-## board2.json
+可以获取未完成的像素数量，并根据 cookies 的数量估算剩余时间。
 
-在 `board.json` 的最开头加上 `var board=`：
+在与他人抢地盘时估算的剩余时间是不准的，可以使用 `loopcount.bat` 监控剩余像素数并手动估算。
 
-```
-var board=[
-[x,y,col],[x,y,col],...[x,y,col],
-[x,y,col],[x,y,col],...[x,y,col],
-...
-[x,y,col],[x,y,col],...[x,y,col]
-]
-```
+`runcount.bat`：数一次。
 
-## runxxx.bat
-
-便于使用py。并且无限循环，在发生异常时不会停止。
-
-## runcount.bat
-
-数一次。
-
-## loopcount.bat
-
-一直数。
-
-## ImageToData.py
-
-将索引图转化为数据。
-
-使用方法：`python ImageToData.py 图片路径 左上角X坐标 左上角Y坐标`
-
-生成的数据会在原 `board.json` 的基础上添加，并自动生成 `board2.json`。
-
-索引图生成方法：
-
-1. 将 `LuoguPaintBoard.gpl` 复制到 `GIMP安装路径\share\gimp\2.0\palettes`
-2. 用 GIMP 打开原始图片。
-3. 图像→缩放图像。
-4. 图像→模式→索引，Use custom paletter：LuoguPaintBoard，**不要**勾选“从颜色表中移除无用和重复的颜色”。“递色”选项可以自己试试看哪种效果比较好。
-5. 文件→导出为→选一个路径→选择文件类型：**bmp** →导出。
+`loopcount.bat`：一直数。

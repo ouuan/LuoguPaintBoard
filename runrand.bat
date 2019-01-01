@@ -1,3 +1,3 @@
 :loop
-python rand.py
+python .\src\rand.py
 goto loop

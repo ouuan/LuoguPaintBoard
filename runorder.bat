@@ -1,3 +1,3 @@
 :loop
-python order.py
+python .\src\order.py
 goto loop
