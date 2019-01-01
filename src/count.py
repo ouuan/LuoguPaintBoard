@@ -22,4 +22,4 @@ for i in board:
 	if x*401+y<len(response.text) and int(response.text[x*401+y],32)==col:
 		tot=tot-1
 print(tot)
-print(str(int(tot/(110*len(cookies))))+" hour(s) "+str(int(tot/(110*len(cookies))*60))+" minute(s)")
+print(str(int(tot/(110*len(cookies))))+" hour(s) "+str(int(tot/(110*len(cookies))*60)%60)+" minute(s)")
