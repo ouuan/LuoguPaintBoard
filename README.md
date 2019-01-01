@@ -28,10 +28,10 @@ P.S. 如果需要画多张图，重复执行几次即可，`ImageToData.py` 不�
 
 ```
 [
-["cookies here"],
-["cookies here"],
+"cookies here",
+"cookies here",
 ...
-["cookies here"]
+"cookies here"
 ]
 ```
 
