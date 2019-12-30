@@ -2,7 +2,7 @@ import requests
 import json
 
 getheader={
-        "refer":"https://www.luogu.org/paintBoard",
+        "refer":"https://www.luogu.com.cn/paintBoard",
         "user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36"
 }
 
@@ -14,7 +14,7 @@ with open("data/board.json",'r') as boardjson:
 
 tot=len(board)
 
-response=requests.get("https://www.luogu.org/paintBoard/board",headers=getheader)
+response=requests.get("https://www.luogu.com.cn/paintBoard/board",headers=getheader)
 for i in board:
 	x=i[0]
 	y=i[1]
