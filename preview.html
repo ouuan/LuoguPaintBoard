@@ -46,11 +46,19 @@
 			var drawing=document.getElementById("drawing"); 
 			var context=drawing.getContext("2d");
 			var a=context.createImageData(800,400);
+			for (i=0;i<800*400;++i)
+			{
+				col=2;
+				a.data[i*4]=c[col][0];
+				a.data[i*4+1]=c[col][1];
+				a.data[i*4+2]=c[col][2];
+				a.data[i*4+3]=255;
+			}
 			for (i=0;i<board.length;++i)
 			{
-				x=board[i][0]
-				y=board[i][1]
-				col=board[i][2]
+				x=board[i][0];
+				y=board[i][1];
+				col=board[i][2];
 				a.data[(y*800+x)*4]=c[col][0];
 				a.data[(y*800+x)*4+1]=c[col][1];
 				a.data[(y*800+x)*4+2]=c[col][2];
