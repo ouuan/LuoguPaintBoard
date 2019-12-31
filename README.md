@@ -1,6 +1,18 @@
-# 使用教程
+为什么需要组队？
 
-## 准备环境
+即使是所画内容不一样的团队，合并后可以共同对抗外部势力，减少空闲 Cookies 带来的损失。因此，组队是一个合作双方共赢的经营模式。
+
+组队 / 贡献个人 Cookies 请 QQ 联系 1609483441，可根据 Cookies 数量及想画的内容进行商谈。可以共享 Cookies，也可以共享数据，Cookies 由双方分别保管。
+
+目前计划：
+
+![plan.png](https://i.loli.net/2019/12/31/m1dbXiHOcCUVa6v.png)
+
+***
+
+## 使用教程
+
+### 准备环境
 
 [python 3](https://www.python.org/downloads/)
 
@@ -10,7 +22,7 @@ pillow：`python -m pip install pillow`
 
 requests：`python -m pip install requests`
 
-## 制作数据
+### 制作数据
 
 1. 将 `LuoguPaintBoard.gpl` 复制到 `GIMP安装路径\share\gimp\2.0\palettes`
 2. 用 GIMP 打开原始图片。
@@ -22,7 +34,7 @@ requests：`python -m pip install requests`
 
 P.S. 如果需要画多张图，重复执行几次即可，`ImageToData.py` 不会覆盖原有数据，而会在后面添加。
 
-## 填写 cookies
+### 填写 cookies
 
 在 `cookies.json` 里按如下格式填写：
 
@@ -35,19 +47,19 @@ P.S. 如果需要画多张图，重复执行几次即可，`ImageToData.py` 不�
 ]
 ```
 
-## 开始画图
+### 开始画图
 
 默认时间间隔为 30s（一轮 cookies），如有需要请自行修改 `src` 内源码的 `timeout` 。
 
-### rand
+#### rand
 
 随机撒点。推荐只用来画图，请不要在维护图片时使用。
 
-### order
+#### order
 
 按照 `data\board.json` 中的顺序依次画。推荐使用 order 维护图片。
 
-### run
+#### run
 
 `runrand.bat`：无限循环随机撒点。
 
@@ -55,7 +67,7 @@ P.S. 如果需要画多张图，重复执行几次即可，`ImageToData.py` 不�
 
 如果不通过 bat 使用 py，请注意路径问题（使用 bat 路径是 `cookies.json`、 `data/board.json`，使用 py 路径是 `../cookies.json`、`../data/board.json`）。
 
-### count
+#### count
 
 可以获取未完成的像素数量，并根据 cookies 的数量估算剩余时间。
 
