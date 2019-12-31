@@ -4,10 +4,6 @@
 
 组队 / 贡献个人 Cookies 请 QQ 联系 1609483441，可根据 Cookies 数量及想画的内容进行商谈。可以共享 Cookies，也可以共享数据，Cookies 由双方分别保管。
 
-目前计划：
-
-![plan.png](https://i.loli.net/2019/12/31/m1dbXiHOcCUVa6v.png)
-
 ***
 
 ## 使用教程
