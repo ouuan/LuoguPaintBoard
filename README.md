@@ -49,7 +49,7 @@ P.S. 如果需要画多张图，重复执行几次即可，`ImageToData.py` 不�
 
 ### 开始画图
 
-默认时间间隔为 30s（一轮 cookies），如有需要请自行修改 `src` 内源码的 `timeout` 。
+默认时间间隔为 10s（一轮 cookies），如有需要请自行修改 `src` 内源码的 `timeout` 。
 
 #### rand
 
