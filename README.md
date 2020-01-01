@@ -32,7 +32,7 @@ requests：`python -m pip install requests`
    1. 将`LuoguPaintBoard.irs` 复制到 `Photoshop2020安装路径\Presets\Optimized Settings`
    2. 用 Photoshop2020 打开原始图片
    3. 缩放图像
-   4. <kbd>Ctrl+Shift+Alt+S<kbd>, 然后Preset选择LuoguPaintBoard, Dither自己看着办
+   4. <kbd>Ctrl+Shift+Alt+S</kbd>, 然后Preset选择LuoguPaintBoard, Dither自己看着办
    5. 导出为bmp即可
 
 ### 生成数据
