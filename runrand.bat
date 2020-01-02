@@ -1,3 +1,3 @@
 :loop
-python .\src\rand.py
+python paint.py rand
 goto loop
