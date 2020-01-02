@@ -1,3 +1,3 @@
 :loop
-python .\src\order.py
+python paint.py order
 goto loop
